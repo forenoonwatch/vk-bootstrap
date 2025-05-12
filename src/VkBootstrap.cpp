@@ -939,7 +939,7 @@ std::vector<std::string> check_device_extension_support(
 }
 
 // clang-format off
-void combine_features(VkPhysicalDeviceFeatures& dest, VkPhysicalDeviceFeatures src){
+void combine_features(VkPhysicalDeviceFeatures& dest, const VkPhysicalDeviceFeatures& src){
     dest.robustBufferAccess = dest.robustBufferAccess || src.robustBufferAccess;
 	dest.fullDrawIndexUint32 = dest.fullDrawIndexUint32 || src.fullDrawIndexUint32;
 	dest.imageCubeArray = dest.imageCubeArray || src.imageCubeArray;
